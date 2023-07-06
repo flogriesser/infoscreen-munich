@@ -24,7 +24,6 @@ def gen():
 
 
 def get_all_images():
-    #image_folder = '/home/flo/Nextcloud/Projects/GitHub/OWN/infoscreen-munich/TestPictures/wallpapers-master/'
     images = [img for img in os.listdir(picture_path)
               if img.endswith(".jpg") or
               img.endswith(".jpeg") or
