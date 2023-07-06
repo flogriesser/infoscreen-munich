@@ -6,7 +6,7 @@ app = Flask(__name__, template_folder='template')
 
 picture_path =  os.environ.get('picture_path')
 
-
+picture_path = "/home/flo/Nextcloud/Projects/GitHub/OWN/infoscreen-munich/TestPictures/2ndFloor/" # FIXME REMOVE
 
 def gen():
     i = 0
