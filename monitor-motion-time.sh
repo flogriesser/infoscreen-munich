@@ -14,10 +14,10 @@ echo "Detecting motion"
 while true; do
     if [ $(gpio read 26) -eq 1 ]; then
         echo "Motion Detected!"
-        vcgencmd display_power 1
+        xset -display :0.0 dpms force on 
         sleep 300 #Sleep 5 Minutes
     fi
     sleep 5
-    vcgencmd display_power 0
+    xset -display :0.0 dpms force off
 done
 
