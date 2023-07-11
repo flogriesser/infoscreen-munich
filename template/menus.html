@@ -1,0 +1,28 @@
+
+{% block content %}
+    <h2>{{ list_name }}</h2>
+
+    <ul id="item-list">
+        {% for item in items %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+
+    <script>
+        // Function to update the list
+        function updateList() {
+            fetch('/update_menu')
+                .then(response => response.text())
+                .then(data => {
+                    const itemList = document.getElementById('item-list');
+                    itemList.innerHTML = data;
+                });
+        }
+
+        // Periodically update the list every 30 seconds
+        setInterval(updateList, 30000);
+
+        // Initial list update on page load
+        window.addEventListener('load', updateList);
+    </script>
+{% endblock %}
