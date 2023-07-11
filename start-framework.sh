@@ -2,7 +2,7 @@
 
 cd /var/infoscreen-munich
 
-git pull
+git pull --force
 
 flask run &
 
