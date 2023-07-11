@@ -16,8 +16,8 @@ while true; do
         echo "Motion Detected!"
         xset -display :0.0 dpms force on 
         sleep 300 #Sleep 5 Minutes
+    else
+        xset -display :0.0 dpms force off
     fi
-    sleep 5
-    xset -display :0.0 dpms force off
 done
 
